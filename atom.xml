@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://imys.net/"/>
-  <updated>2016-10-13T08:37:26.974Z</updated>
+  <updated>2016-10-18T07:31:50.739Z</updated>
   <id>http://imys.net/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://imys.net/20161013/java-webpack-dev-build.html"/>
     <id>http://imys.net/20161013/java-webpack-dev-build.html</id>
     <published>2016-10-13T06:05:56.000Z</published>
-    <updated>2016-10-13T08:37:26.974Z</updated>
+    <updated>2016-10-18T07:31:50.739Z</updated>
     
     <content type="html"><![CDATA[<p>标题可能不是很恰当，想不到一个合适的标题来概括我遇到以及解决的问题，暂且这样吧。</p>
 <h2 id="项目描述"><a href="#项目描述" class="headerlink" title="项目描述"></a>项目描述</h2><p>是一个不完全与后端分离的基于 webpack 构建的 Vue 项目。</p>
@@ -32,7 +32,7 @@
 <h3 id="webpack-dev-server"><a href="#webpack-dev-server" class="headerlink" title="webpack-dev-server"></a>webpack-dev-server</h3><p>开始用 <code>webpack-dev-server</code> 代理后端服务器，可以实现监听更改、实时构建，但由于页面上的页面样式脚本引用与 webpack 构建好的文件路径匹配不上，还是获取不到更改。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> webpack = <span class="built_in">require</span>(<span class="string">'webpack'</span>)</div><div class="line"><span class="keyword">var</span> webpackDevServer = <span class="built_in">require</span>(<span class="string">'webpack-dev-server'</span>)</div><div class="line"><span class="keyword">var</span> config = <span class="built_in">require</span>(<span class="string">'./webpack.config'</span>)</div><div class="line"></div><div class="line"><span class="keyword">var</span> server = <span class="keyword">new</span> webpackDevServer(webpack(config), &#123;</div><div class="line">    <span class="attr">hot</span>: <span class="literal">true</span>,</div><div class="line">    <span class="attr">quiet</span>: <span class="literal">false</span>,</div><div class="line">    <span class="attr">stats</span>: &#123; </div><div class="line">        <span class="attr">chunks</span>: <span class="literal">false</span>,</div><div class="line">        <span class="attr">colors</span>: <span class="literal">true</span> </div><div class="line">    &#125;,</div><div class="line">    <span class="attr">proxy</span>: &#123;</div><div class="line">        <span class="string">'**'</span>: <span class="string">'http://localhost:8080'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">historyApiFallback</span>: <span class="literal">true</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line">server.listen(<span class="number">3000</span>)</div></pre></td></tr></table></figure>
 <p>跑了 3000 端口，页面上的文件引用依然是 8080 端口，好像是在后端就写死了。即使是我临时改了 jsp 文件的引用路径，还是需要手动刷新下页面才能获取更改。</p>
-<h2 id="browsersync"><a href="#browsersync" class="headerlink" title="browsersync"></a>browsersync</h2><p>想起了 gulp 时代一直用的 <code>browsersync</code>，用它代理后端服务，监听文件变更并执行 <code>webpack</code> 命令，刷新浏览器。</p>
+<h3 id="browsersync"><a href="#browsersync" class="headerlink" title="browsersync"></a>browsersync</h3><p>想起了 gulp 时代一直用的 <code>browsersync</code>，用它代理后端服务，监听文件变更并执行 <code>webpack</code> 命令，刷新浏览器。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'shelljs/global'</span>)</div><div class="line"><span class="keyword">var</span> bs = <span class="built_in">require</span>(<span class="string">'browser-sync'</span>).create()</div><div class="line"></div><div class="line">bs.init(&#123;</div><div class="line">    <span class="attr">proxy</span>: <span class="string">'http://localhost:8080'</span></div><div class="line">&#125;)</div><div class="line"></div><div class="line">bs.watch(<span class="string">'./src/**/*.*'</span>).on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">    exec(<span class="string">'webpack'</span>, bs.reload)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>但这样每次执行 <code>webpack</code> 命令，都相当于全新编译，所以速度很慢。以该项目而言，每次更改后需要等待 6s 才刷新浏览器。</p>
 <p>还实验了 gulp + webpack-stream，属于换汤不换药，每次还是全新编译。</p>
@@ -98,9 +98,9 @@
     </summary>
     
     
-      <category term="html5" scheme="http://imys.net/tags/html5/"/>
-    
       <category term="canvas" scheme="http://imys.net/tags/canvas/"/>
+    
+      <category term="html5" scheme="http://imys.net/tags/html5/"/>
     
       <category term="event" scheme="http://imys.net/tags/event/"/>
     
@@ -591,9 +591,9 @@
     
       <category term="html" scheme="http://imys.net/tags/html/"/>
     
-      <category term="css" scheme="http://imys.net/tags/css/"/>
-    
       <category term="css3" scheme="http://imys.net/tags/css3/"/>
+    
+      <category term="css" scheme="http://imys.net/tags/css/"/>
     
   </entry>
   
@@ -641,9 +641,9 @@
     </summary>
     
     
-      <category term="css" scheme="http://imys.net/tags/css/"/>
-    
       <category term="css3" scheme="http://imys.net/tags/css3/"/>
+    
+      <category term="css" scheme="http://imys.net/tags/css/"/>
     
   </entry>
   
@@ -959,9 +959,9 @@ git push origin master
     </summary>
     
     
-      <category term="Linux" scheme="http://imys.net/tags/Linux/"/>
-    
       <category term="Nodejs" scheme="http://imys.net/tags/Nodejs/"/>
+    
+      <category term="Linux" scheme="http://imys.net/tags/Linux/"/>
     
       <category term="Ubuntu" scheme="http://imys.net/tags/Ubuntu/"/>
     
@@ -1211,15 +1211,15 @@ git push origin master
     
       <category term="css" scheme="http://imys.net/tags/css/"/>
     
-      <category term="mobile" scheme="http://imys.net/tags/mobile/"/>
-    
       <category term="devicePixelRatio" scheme="http://imys.net/tags/devicePixelRatio/"/>
+    
+      <category term="em" scheme="http://imys.net/tags/em/"/>
+    
+      <category term="mobile" scheme="http://imys.net/tags/mobile/"/>
     
       <category term="webview" scheme="http://imys.net/tags/webview/"/>
     
       <category term="viewport" scheme="http://imys.net/tags/viewport/"/>
-    
-      <category term="em" scheme="http://imys.net/tags/em/"/>
     
   </entry>
   
@@ -1544,11 +1544,11 @@ git push origin master
     </summary>
     
     
+      <category term="移动端" scheme="http://imys.net/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
+    
       <category term="devicePixelRatio" scheme="http://imys.net/tags/devicePixelRatio/"/>
     
       <category term="em" scheme="http://imys.net/tags/em/"/>
-    
-      <category term="移动端" scheme="http://imys.net/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
     
       <category term="rem" scheme="http://imys.net/tags/rem/"/>
     
@@ -2071,9 +2071,9 @@ package.json
     </summary>
     
     
-      <category term="html5" scheme="http://imys.net/tags/html5/"/>
-    
       <category term="canvas" scheme="http://imys.net/tags/canvas/"/>
+    
+      <category term="html5" scheme="http://imys.net/tags/html5/"/>
     
       <category term="chart" scheme="http://imys.net/tags/chart/"/>
     
@@ -2154,9 +2154,9 @@ package.json
     </summary>
     
     
-      <category term="html5" scheme="http://imys.net/tags/html5/"/>
-    
       <category term="canvas" scheme="http://imys.net/tags/canvas/"/>
+    
+      <category term="html5" scheme="http://imys.net/tags/html5/"/>
     
       <category term="process" scheme="http://imys.net/tags/process/"/>
     
