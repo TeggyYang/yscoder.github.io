@@ -9,29 +9,28 @@
   <link rel="canonical" href="http://imys.net/20150527/js-cancel-event.html">
   
   
-  <title>js阻止子元素响应父元素事件 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>js阻止子元素响应父元素事件 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="javascript">
+  <meta name="keywords" content="Event,JavaScript">
   <meta name="description" content="js阻止子元素响应父元素事件，阻止事件冒泡">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js阻止子元素响应父元素事件">
 <meta property="og:url" content="http://imys.net/20150527/js-cancel-event.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="js阻止子元素响应父元素事件，阻止事件冒泡">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.903Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js阻止子元素响应父元素事件">
 <meta name="twitter:description" content="js阻止子元素响应父元素事件，阻止事件冒泡">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="今天同事遇到这样一个问题，找我解决。他希望点击整个DIV都可以响应点击事件，但是有些交互元素需要排除掉。如：点击链接页面跳转、点击按钮响应事件等）。这是一个关于事件冒泡的问题，那便从事件冒泡写起。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -44,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -102,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -121,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -131,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">js阻止子元素响应父元素事件</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2015-05-27T12:44:34.000Z" itemprop="datePublished" class="page-time">
+  May 27, 2015
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -198,58 +207,64 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Event/">Event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20150527/js-cancel-event.html&title=《js阻止子元素响应父元素事件》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20150527/js-cancel-event.html&title=《js阻止子元素响应父元素事件》 — Yusen's Blog&source=今天同事遇到这样一个问题，找我解决。他希望点击整个DIV都可以响应点击事件，但是有些交互元素需要排除掉。如：点击链接页面跳转、点击按钮响应事件等）。这是一..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20150527/js-cancel-event.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js阻止子元素响应父元素事件》 — Yusen's Blog&url=http://imys.net/20150527/js-cancel-event.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20150527/js-cancel-event.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -279,10 +294,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="js-cancel-event" data-title="js阻止子元素响应父元素事件" data-url="http://imys.net/20150527/js-cancel-event.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -291,10 +306,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -318,57 +334,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "js阻止子元素响应父元素事件",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20150527/js-cancel-event.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20150527/js-cancel-event.html&title=《js阻止子元素响应父元素事件》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20150527/js-cancel-event.html&title=《js阻止子元素响应父元素事件》 — Yusen's Blog&source=今天同事遇到这样一个问题，找我解决。他希望点击整个DIV都可以响应点击事件，但是有些交互元素需要排除掉。如：点击链接页面跳转、点击按钮响应事件等）。这是一..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20150527/js-cancel-event.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《js阻止子元素响应父元素事件》 — Yusen's Blog&url=http://imys.net/20150527/js-cancel-event.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20150527/js-cancel-event.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aQZLCMAwFUe5/aWY9BfH0lzwUkTsrigqOXxZCkvV44Ot5ca3vef0+vXPzJUOGjNsynsuLP2DNS+/he5MhQ8Y5jKttdbbCX9A6NK/3JkOGDBnrz+uAy78hz5UhQ4aMTsBdJ46k9P2K/w0ZMmR8PYMncPy3fDVSPG+rxWXIkHFDBu+6f/7zv5xvyJAh41aMTrisNfd37eTXmjJkyBjN4AGOlKn8/rhAJfuRIUPGaAZJBHlTrD9yka4mQ4aM2YzOeFatDK4di/6xWxkyZIxmpEeM/cSuP4ohQ4aM0xi1o8RaME2DdRCCZciQcQwjLSzXDf1OAcyfvqE+liFDxq0YcdFYGoxIi1WUtsqQIeMARjDQAMYj0kZ/Orr6Zh0ZMmSMZqQJWaetXwymoMCWIUPGCYxO4ONhNC1ciympDBkyhjLSRJCH6bShlh5nBiexMmTIuDmDlKa8pOwUxrtG0GTIkDGJkYa/9MG1dlva5pMhQ8Zsxt7ITUrc2mgFGQqRIUPGbEbaCOPbXa/MAzrKCWXIkHEAIw2X/BXwwrXW55chQ8Y5jFqymI5fkFSyeL8MGTKGMjqt/OLhIgDEIxoyZMgYzegfbaYPThO+zsuSIUPGJAYfp6iB+etoBVwZMmQcwOCBL22uxY0zfhggQ4YMGe2mPx+nSGEbAq4MGTJGM8hGSYutVtZevj4ZMmQcwOANNd7uT1duHWfKkCFjNKNWOnYOBtZb4UmhDBkyDmD8AP5H+gjVdYdFAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -389,7 +413,7 @@ url: "http://imys.net/20150527/js-cancel-event.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

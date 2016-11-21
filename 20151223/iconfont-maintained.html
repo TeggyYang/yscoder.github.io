@@ -9,29 +9,28 @@
   <link rel="canonical" href="http://imys.net/20151223/iconfont-maintained.html">
   
   
-  <title>iconfont兼容与维护 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>iconfont兼容与维护 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="iconfont">
+  <meta name="keywords" content="CSS,iconfont">
   <meta name="description" content="iconfont字体图标兼容与维护,使用经验,ie7兼容">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iconfont兼容与维护">
 <meta property="og:url" content="http://imys.net/20151223/iconfont-maintained.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="iconfont字体图标兼容与维护,使用经验,ie7兼容">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.900Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iconfont兼容与维护">
 <meta name="twitter:description" content="iconfont字体图标兼容与维护,使用经验,ie7兼容">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="在扁平化网页设计中，字体图标有着很好的易用性。结合一年的实际运用，来做一下总结。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -44,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -102,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -121,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -131,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">iconfont兼容与维护</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2015-12-23T05:47:34.000Z" itemprop="datePublished" class="page-time">
+  Dec 23, 2015
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -166,7 +175,6 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>在扁平化网页设计中，字体图标有着很好的易用性。结合一年的实际运用，来做一下总结。</p>
 <a id="more"></a>
-<!-- toc -->
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>可以直接引用开源的第三方字体样式文件，如<code>Font Awesome</code>等。<br>或者你想要构建一套产品专属的图标，可以注册一个字体图标库，添加一个图标项目，进行创作和使用。</p>
 <p>我司使用的字体库是<a href="http://www.iconfont.cn/" target="_blank" rel="external">阿里的iconfont</a>。</p>
 <p>设计图标我不懂，都是设计师负责产出的。<br>产出后，可以看到图标的<code>Unicode</code>和<code>font class</code>。</p>
@@ -193,7 +201,7 @@
 <figure class="highlight"><table><tr><td class="code"><pre><div class="line">.icon-file &#123;</div><div class="line">    *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&amp;#xf016;' )</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>expression 是 ie 特有的 css 属性，可以在其中写 js 脚本。这样又把图标的维护权交还 css 了。</p>
 <p>在 css 中写 js 这种做法肯定是不提倡的，而且一个页面上存在很多的图标，在 ie7 这么恶劣的环境中，渲染速度也是个大问题。我用 IE7 打开 Font Awesome 的页面，速度在30s左右。</p>
-<p>这是个问题，又不算问题。<br>但凡是可以让客户反感 ie 浏览器的问题，都是好问题。</p>
+<p>这是个问题，又不算问题。😏</p>
 
         </div>
         
@@ -209,58 +217,64 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iconfont/">iconfont</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iconfont/">iconfont</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20151223/iconfont-maintained.html&title=《iconfont兼容与维护》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20151223/iconfont-maintained.html&title=《iconfont兼容与维护》 — Yusen's Blog&source=在扁平化网页设计中，字体图标有着很好的易用性。结合一年的实际运用，来做一下总结。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20151223/iconfont-maintained.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《iconfont兼容与维护》 — Yusen's Blog&url=http://imys.net/20151223/iconfont-maintained.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20151223/iconfont-maintained.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -290,10 +304,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="iconfont-maintained" data-title="iconfont兼容与维护" data-url="http://imys.net/20151223/iconfont-maintained.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -302,10 +316,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -329,57 +344,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "iconfont兼容与维护",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20151223/iconfont-maintained.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20151223/iconfont-maintained.html&title=《iconfont兼容与维护》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20151223/iconfont-maintained.html&title=《iconfont兼容与维护》 — Yusen's Blog&source=在扁平化网页设计中，字体图标有着很好的易用性。结合一年的实际运用，来做一下总结。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20151223/iconfont-maintained.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《iconfont兼容与维护》 — Yusen's Blog&url=http://imys.net/20151223/iconfont-maintained.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20151223/iconfont-maintained.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQW7DMAwEwPz/0+m1QGp3V1ILWBqdgkCBNT4wFMnXK17vb+vzm6uV//Zq5+KFgYHxWEZ7lM/HtID28/3ZMDAwzmFcRbCxPclR7nfmz8XAwMC437M2cI+9PgwMDIyrPVG6FqeVGBgYGAmjTeDa8tzY0f/kLo6BgfFARl51///Pf9LfwMDAeBTjXa6xNHH+AvzLqTAwMLZmzKR6eVNzJogXqScGBsbWjCSMzj8gGf/KB8UuT4KBgbEdIw+IeaF/jNe+xB8yXAwMjE0Z7TUyj28zLYG2LYqBgXEOI28MtCW2ta9jQQsBAwPjUYy6+F6G1PxSmu8f/K/AwMB4LCMPiPd72qvs2osxBgbGCYw84Ru7suYheCY0Y2Bg7MoYG//Kb8Ztca29Ntf3aQwMjAcy2qRtLL1Lks4cvyD3xMDA2IKRB7t2hCt/BWN/ABgYGHsz8gjWNg/GRjfaoQ0MDIwTGIkvaWfOFNfyVLXvFWBgYOzJyIPpqv1j32BgYJzAaA+U/3ZtCa+YGcHAwNiUMfOwmbGJtjCHgYFxMmOm0ZiX4fJgmjcPMDAw9ma8y5WngzOA+rViYGBszWgbmTPjDi2yDfoYGBh7M9qRiDYQt+lgO5aBgYFxDqMNfHnJfmY4rBi2wMDAwCiP27Y88+GPZQEXAwPjAMZ8gzMv0kUpJgYGxgGMvBlw/+C2YdA2FTAwMM5kTF0d41+1pbf5EI+BgbEF4wvrRAPxvIFJfgAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -400,7 +423,7 @@ url: "http://imys.net/20151223/iconfont-maintained.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

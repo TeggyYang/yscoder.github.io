@@ -9,29 +9,28 @@
   <link rel="canonical" href="http://imys.net/20151222/eval-with-new-function.html">
   
   
-  <title>神奇的eval()与new Function() | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>神奇的eval()与new Function() | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="Function,eval,javascript">
+  <meta name="keywords" content="JavaScript,Function,eval">
   <meta name="description" content="eval与new Function比较,性能比较,json转换">
 <meta property="og:type" content="article">
 <meta property="og:title" content="神奇的eval()与new Function()">
 <meta property="og:url" content="http://imys.net/20151222/eval-with-new-function.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="eval与new Function比较,性能比较,json转换">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.898Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="神奇的eval()与new Function()">
 <meta name="twitter:description" content="eval与new Function比较,性能比较,json转换">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="在需要兼容IE8以下的日子里，往往需要使用eval()来把后端传过来的JSON串转成可操作的JSON对象。直到昨天在翻看jQuery源码时，才发现jQuery.parseJSON的兼容实现用的是new Function()。马上Google了相关资料，寻找两者的区别。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -44,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -102,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -121,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -131,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">神奇的eval()与new Function()</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2015-12-22T05:07:00.000Z" itemprop="datePublished" class="page-time">
+  Dec 22, 2015
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -166,7 +175,6 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>在需要兼容IE8以下的日子里，往往需要使用<code>eval()</code>来把后端传过来的JSON串转成可操作的JSON对象。直到昨天在翻看jQuery源码时，才发现<code>jQuery.parseJSON</code>的兼容实现用的是<code>new Function()</code>。马上Google了相关资料，寻找两者的区别。</p>
 <a id="more"></a>
-<!-- toc -->
 <h2 id="eval"><a href="#eval" class="headerlink" title="eval"></a>eval</h2><p>eval接受字符串参数，解析其中的js代码。如果编译失败，会抛出异常，否则执行其中的代码，计算返回值。</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="built_in">eval</span>(<span class="string">'2+2'</span>);  <span class="comment">// 4</span></div><div class="line"></div><div class="line"><span class="built_in">eval</span>(<span class="string">'console.log("ok")'</span>);  <span class="comment">// ok</span></div></pre></td></tr></table></figure>
 <p>在实际应用中，通常这样转换JSON。</p>
@@ -206,58 +214,64 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eval/">eval</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Function/">Function</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eval/">eval</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20151222/eval-with-new-function.html&title=《神奇的eval()与new Function()》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20151222/eval-with-new-function.html&title=《神奇的eval()与new Function()》 — Yusen's Blog&source=在需要兼容IE8以下的日子里，往往需要使用eval()来把后端传过来的JSON串转成可操作的JSON对象。直到昨天在翻看jQuery源码时，才发现jQue..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20151222/eval-with-new-function.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《神奇的eval()与new Function()》 — Yusen's Blog&url=http://imys.net/20151222/eval-with-new-function.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20151222/eval-with-new-function.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -287,10 +301,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="eval-with-new-function" data-title="神奇的eval()与new Function()" data-url="http://imys.net/20151222/eval-with-new-function.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -299,10 +313,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -326,57 +341,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "神奇的eval()与new Function()",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20151222/eval-with-new-function.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20151222/eval-with-new-function.html&title=《神奇的eval()与new Function()》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20151222/eval-with-new-function.html&title=《神奇的eval()与new Function()》 — Yusen's Blog&source=在需要兼容IE8以下的日子里，往往需要使用eval()来把后端传过来的JSON串转成可操作的JSON对象。直到昨天在翻看jQuery源码时，才发现jQue..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20151222/eval-with-new-function.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《神奇的eval()与new Function()》 — Yusen's Blog&url=http://imys.net/20151222/eval-with-new-function.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20151222/eval-with-new-function.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3awW7rMAwEwP7/T+ediyDKLuVXwPLoVDiCpfFBJUX+/MTj9Tbef13PzOe8v/+ygYGBcVvGazmSBZLn60+Qgz/uBAMD4wGMZBPr+fmv6xWTtTAwMDBmjAsOzdFaGBgYGJ/mzMLBPBDEwMDAmCWx+eba0PBPc3EMDIwbMvJb97//+7/UNzAwMG7FeJVjHZy1l/47O/n1ZgwMjKMZ+QE3CwfzX9sDFwMD4zmMvKA4a/xqP0E7s66LYmBg3JCx3lZ+dO5cpV1WnMDAwDiUMSwWLtPOdk5e/vwSGmJgYDyS0YZueWtFezR/mYOBgXE0I9/0MLGMj848uf0SpGJgYBzKmF2E7R+p+ScrcnEMDIxDGe3ZlbRQ7G+lDToxMDCewMivw9qZs7dtBYgYGBjHMWZNpTvbmgF+kgoqBgbG0YwkFEvS1zbEvCoAxcDAOJuxc3a1WfJOApz/q8DAwDiJUVQ4L2rhysPN4jkGBsbRjKvKkPWS5eE7LAlgYGAcykjCsjV4VgzYbynDwMB4DiNpldhvGmvDzTrOxcDAOJqRANrAcZb61qEkBgbGoYxXOdpGjTbpbT9rfZ+HgYFxQ0ZbBmg31AZ8SWBat4thYGAcwWjbwnZS2bYYUByyGBgYD2C04V2+xfwib9bkgYGBgbF/TZavsvMcAwMDY7bpvLTQXsB9LGFiYGAczciDvFma2r45by/DwMB4AmMW2K2ftNdq+YpbhUwMDIz7Mf4BHdOTYarCz2EAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -397,7 +420,7 @@ url: "http://imys.net/20151222/eval-with-new-function.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

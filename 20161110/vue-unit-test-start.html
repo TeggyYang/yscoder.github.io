@@ -9,7 +9,7 @@
   <link rel="canonical" href="http://imys.net/20161110/vue-unit-test-start.html">
   
   
-  <title>Vue单元测试起步 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>Vue单元测试起步 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
@@ -27,7 +27,7 @@
 <meta property="og:image" content="http://7ximpj.com1.z0.glb.clouddn.com/vue-unit-3.jpg">
 <meta property="og:image" content="http://7ximpj.com1.z0.glb.clouddn.com/vue-unit-4.jpg">
 <meta property="og:image" content="http://7ximpj.com1.z0.glb.clouddn.com/vue-unit-5.png">
-<meta property="og:updated_time" content="2016-11-10T11:44:41.000Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.516Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue单元测试起步">
 <meta name="twitter:description" content="Vue单元测试配置，Vue unit test, Vue Karma 配置">
@@ -35,10 +35,8 @@
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="最近在搭建一个项目的前端开发环境，准备趁此把一些没用过的东西尝试下，比如：单元测试。使用vue-cli可以直接生成一个包含unit、e2e测试的开发环境，不过还是需要去了解其中的组织结构、配置和模块的使用等。
-准备没有一点相关经验，先把vue-cli生成后的test/unit目录拿到自己的项目中。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -51,7 +49,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -109,6 +109,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -128,7 +129,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -138,8 +139,15 @@
 
     <div class="container">
         <h1 class="title">Vue单元测试起步</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2016-11-10T03:08:14.000Z" itemprop="datePublished" class="page-time">
+  Nov 10, 2016
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -174,7 +182,7 @@
             <p>最近在搭建一个项目的前端开发环境，准备趁此把一些没用过的东西尝试下，比如：单元测试。<br>使用<code>vue-cli</code>可以直接生成一个包含<code>unit</code>、<code>e2e</code>测试的开发环境，不过还是需要去了解其中的组织结构、配置和模块的使用等。</p>
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>没有一点相关经验，先把<code>vue-cli</code>生成后的<code>test/unit</code>目录拿到自己的项目中。<br><a id="more"></a></p>
 <p><code>test</code> 目录结构:</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">- test</div><div class="line">-   unit</div><div class="line">-     specs</div><div class="line">-     .eslintrc</div><div class="line">-     index.js</div><div class="line">-     karma.conf.js</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">|- test</div><div class="line">|--- unit</div><div class="line">|----- specs</div><div class="line">|----- .eslintrc</div><div class="line">|----- index.js</div><div class="line">|----- karma.conf.js</div></pre></td></tr></table></figure>
 <p>之后在<code>package.json</code>中找到<code>karma</code>相关的模块。</p>
 <ul>
 <li><a href="http://karma-runner.github.io/0.13/index.html" target="_blank" rel="external">karma</a> 一个 JavaScript 测试运行器，其在测试中的作用相当于开发构建中使用的<code>webpack</code>。</li>
@@ -228,7 +236,7 @@
 <li>创建一个用于测试的 Vue 实例，然后组件挂上去；</li>
 <li>对实例进行模拟操作，然后断言期望值。</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> SearchView <span class="keyword">from</span> <span class="string">'src/components/SearchView'</span></div><div class="line"></div><div class="line">describe(<span class="string">'SearchView.vue'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'Input is normal '</span>, () =&gt; &#123;</div><div class="line">        <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">            <span class="attr">el</span>: <span class="built_in">document</span>.createElement(<span class="string">'div'</span>),</div><div class="line">            <span class="attr">render</span>: <span class="function">(<span class="params">h</span>) =&gt;</span> h(SearchView)</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">        vm.key = <span class="string">'曾经的你'</span></div><div class="line"></div><div class="line">        vm.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            expect(vm.$el.querySelector(<span class="string">'.m-key'</span>).textContent).to.equal(<span class="string">'曾经的你'</span>)</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></div><div class="line"><span class="keyword">import</span> SearchView <span class="keyword">from</span> <span class="string">'src/components/SearchView'</span></div><div class="line"></div><div class="line">describe(<span class="string">'SearchView.vue'</span>, () =&gt; &#123;</div><div class="line">    it(<span class="string">'Input is normal'</span>, () =&gt; &#123;</div><div class="line">        <span class="keyword">const</span> vm = <span class="keyword">new</span> Vue(&#123;</div><div class="line">            <span class="attr">el</span>: <span class="built_in">document</span>.createElement(<span class="string">'div'</span>),</div><div class="line">            <span class="attr">render</span>: <span class="function">(<span class="params">h</span>) =&gt;</span> h(SearchView)</div><div class="line">        &#125;)</div><div class="line"></div><div class="line">        vm.key = <span class="string">'曾经的你'</span></div><div class="line"></div><div class="line">        vm.$nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            expect(vm.$el.querySelector(<span class="string">'.m-key'</span>).textContent).to.equal(<span class="string">'曾经的你'</span>)</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
 <p>实际的项目中，针对复杂的逻辑或者异步操作，测试一定不会这么简单。😅<br>下一步准备找一些 Vue 的开源项目，学习一下其中的测试用例写法。</p>
 <p>End!</p>
 
@@ -246,9 +254,10 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
@@ -257,47 +266,52 @@
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20161110/vue-unit-test-start.html&title=《Vue单元测试起步》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20161110/vue-unit-test-start.html&title=《Vue单元测试起步》 — Yusen's Blog&source=最近在搭建一个项目的前端开发环境，准备趁此把一些没用过的东西尝试下，比如：单元测试。使用vue-cli可以直接生成一个包含unit、e2e测试的开发环境，..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20161110/vue-unit-test-start.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue单元测试起步》 — Yusen's Blog&url=http://imys.net/20161110/vue-unit-test-start.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20161110/vue-unit-test-start.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -320,10 +334,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="vue-unit-test-start" data-title="Vue单元测试起步" data-url="http://imys.net/20161110/vue-unit-test-start.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -332,10 +346,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -359,57 +374,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "Vue单元测试起步",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20161110/vue-unit-test-start.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20161110/vue-unit-test-start.html&title=《Vue单元测试起步》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20161110/vue-unit-test-start.html&title=《Vue单元测试起步》 — Yusen's Blog&source=最近在搭建一个项目的前端开发环境，准备趁此把一些没用过的东西尝试下，比如：单元测试。使用vue-cli可以直接生成一个包含unit、e2e测试的开发环境，..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20161110/vue-unit-test-start.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue单元测试起步》 — Yusen's Blog&url=http://imys.net/20161110/vue-unit-test-start.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20161110/vue-unit-test-start.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aQW7DMAwEwPz/0ynQU4HExi7lFo08OhlOYmtyICiSj0e8nt/r5/XP9frN10+P7iTPvGxhYGB8LON5ul5feXTnnH3+25x3SMXAwLgBo93KLAYmb8y/iYGBgXGe2OXUq4IvBgYGRv76/OB61eEWAwMDIz/E5vdnKeMfncUxMDA+kDFrDPzN9a/3NzAwMP4943npyhPHJHAX78XAwNiacV5KuyoQrw9tRIEYAwNja0Y77rCeXM5g0V+PgYGxHSMfephFuba4lu/hTVKIgYGxNWPWdGxL+e0wR/Lpm7M4BgbGdoykKNa2EvPSf/vMKHHEwMC4GSMve7Xp4LUtBAwMjL0ZeVF+lq4t1f/i+QoMDIz7MGbJX8urW5JJmwEDA2NrxmxIIg+d+WG4DbKHY2EYGBi3YVy1lbbQn19HfVQMDIyNGG3obMtnLa89TmNgYNyTkTwibwasPKc4xGJgYGzKyFO3NqVbaVUmLcxhBoqBgfGBjLaktXLEXTn01o1PDAyM7Rgr4xGz7c5aoUVXEwMDY2vGrCXZltuSjSZJ4WHAxcDA2I6RJ2ftyNeswTCLqxgYGLsyVpK82YBXO14WBVwMDIytGevROi/czxLKtnWBgYGxK6NtHM4K/bNGKQYGBsZKiGzHuYZjE/kTMDAwMEZF/yRYJ6W9KJ/FwMDAOA2ybeEs33pRXMPAwLgBIx9dXQ+XeROiHgvDwMDYlDFrDLQNy3aLbXKJgYGxKeMLnl1LqdNxFHwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -430,7 +453,7 @@ url: "http://imys.net/20161110/vue-unit-test-start.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

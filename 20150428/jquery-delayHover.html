@@ -9,32 +9,28 @@
   <link rel="canonical" href="http://imys.net/20150428/jquery-delayHover.html">
   
   
-  <title>jQuery扩展 - 延迟执行hover事件 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>jQuery扩展 - 延迟执行hover事件 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="jquery插件,jquery">
+  <meta name="keywords" content="jQuery,jQuery插件">
   <meta name="description" content="jQuery扩展 - 延迟执行hover事件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery扩展 - 延迟执行hover事件">
 <meta property="og:url" content="http://imys.net/20150428/jquery-delayHover.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="jQuery扩展 - 延迟执行hover事件">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.902Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery扩展 - 延迟执行hover事件">
 <meta name="twitter:description" content="jQuery扩展 - 延迟执行hover事件">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="
-适用场景如：鼠标随便一滑，无数个下拉菜单出来了，用户可能只是鼠标“打个酱油”罢了。
-
-实现很简单，就是使用setTimeout延迟事件代码的执行。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -47,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -105,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -124,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -134,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">jQuery扩展 - 延迟执行hover事件</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2015-04-28T09:15:57.000Z" itemprop="datePublished" class="page-time">
+  Apr 28, 2015
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -165,6 +171,7 @@
 </blockquote>
 <p>实现很简单，就是使用<code>setTimeout</code>延迟事件代码的执行。<br><a id="more"></a></p>
 <figure class="highlight js"><table><tr><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">DelayHover</span>(<span class="params">options</span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> defaults = &#123;</div><div class="line">            <span class="attr">speed</span> : <span class="number">400</span>,                <span class="comment">// 延迟时间(毫秒)</span></div><div class="line">            onHover : <span class="function"><span class="keyword">function</span>(<span class="params">el</span>) </span>&#123;&#125;,  <span class="comment">// 鼠标悬浮</span></div><div class="line">            onOut : <span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;&#125;      <span class="comment">// 鼠标离开</span></div><div class="line">        &#125;;</div><div class="line"></div><div class="line">        <span class="keyword">this</span>.settings = $.extend(&#123;&#125;, defaults, options);</div><div class="line">        <span class="keyword">var</span> _this = <span class="keyword">this</span>, hoverTimer;</div><div class="line"></div><div class="line">        _this.bind = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            $(_this).hover(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                hoverTimer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">                    _this.settings.onHover(_this);</div><div class="line">                &#125;, _this.settings.speed);</div><div class="line">            &#125;, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">                clearTimeout(hoverTimer);</div><div class="line">                _this.settings.onOut(_this);</div><div class="line">            &#125;);</div><div class="line"></div><div class="line">        &#125;;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    $.fn.delayHover = <span class="function"><span class="keyword">function</span>(<span class="params">options</span>) </span>&#123;</div><div class="line"></div><div class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">            DelayHover.call(<span class="keyword">this</span>,options);</div><div class="line">            <span class="keyword">this</span>.bind();</div><div class="line">        &#125;);</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;)(jQuery);</div></pre></td></tr></table></figure>
+
         </div>
         
         <blockquote class="post-copyright">
@@ -179,58 +186,67 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery/">jquery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jquery插件/">jquery插件</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery插件/">jQuery插件</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20150428/jquery-delayHover.html&title=《jQuery扩展 - 延迟执行hover事件》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20150428/jquery-delayHover.html&title=《jQuery扩展 - 延迟执行hover事件》 — Yusen's Blog&source=
+适用场景如：鼠标随便一滑，无数个下拉菜单出来了，用户可能只是鼠标“打个酱油”罢了。
+
+实现很简单，就是使用setTimeout延迟事件代码的执行。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20150428/jquery-delayHover.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jQuery扩展 - 延迟执行hover事件》 — Yusen's Blog&url=http://imys.net/20150428/jquery-delayHover.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20150428/jquery-delayHover.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -260,10 +276,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="jquery-delayHover" data-title="jQuery扩展 - 延迟执行hover事件" data-url="http://imys.net/20150428/jquery-delayHover.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -272,10 +288,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -299,57 +316,68 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "jQuery扩展 - 延迟执行hover事件",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20150428/jquery-delayHover.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20150428/jquery-delayHover.html&title=《jQuery扩展 - 延迟执行hover事件》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20150428/jquery-delayHover.html&title=《jQuery扩展 - 延迟执行hover事件》 — Yusen's Blog&source=
+适用场景如：鼠标随便一滑，无数个下拉菜单出来了，用户可能只是鼠标“打个酱油”罢了。
+
+实现很简单，就是使用setTimeout延迟事件代码的执行。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20150428/jquery-delayHover.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《jQuery扩展 - 延迟执行hover事件》 — Yusen's Blog&url=http://imys.net/20150428/jquery-delayHover.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20150428/jquery-delayHover.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3awY7DIAxF0f7/T2e2kabQ+0wSKeayqiJCOCxcjPl8cDtO7fxk9HvU//xkNP6ozwVNhgwZr2Uc0/Z/oivv8j58fBkyZOzDGE1xPnQtmKYjz+cmQ4YMGaM+6eTm48iQIUPGVQw+IZ6gypAhQwZnkAA6D7srR2+P5uIyZMh4IYOfuj//+5b6hgwZMl7FOMI235zxnitB9susZMiQ0ZqxUsLkh3EkiPNLHsMRZMiQ0ZRB0sJ0A7feny+BDBkydmDwTuk2cekfIAzrMmTI6M3gZcX0msUtq0v+N2TIkNGUwQdKU9P0QK22cDJkyNiBUbswkVYSa4B4JytDhoymjHniSgblVyWu3TJ+2RrKkCFjGwZ/nobRdLrogE+GDBnbMGrFxVoaXCsVBLm4DBky2jGuOujnQTO9cIYCrgwZMpoyeKp51cVWXjCQIUOGjJWyZRpkSVu5ciFDhozejPQDKZIE0PRq2jDUypAhoykjnSIvK/ICQ+27fKFlyJDRg5GWG3mInPfk6W6xHitDhox2DJ6I1qbCn5OwG7wgQ4aMFow4tD2yQazNU4YMGf0YK8f3K9PioRYdusmQIaM1YyXMraS+/CAvTaRlyJDRlUGCLL9yQYJpbQ/7410ZMmRswCCBr3YlIg2yxcKqDBkyZIRBsFZs4GVOGTJkyOApKN9Q8vCdFidkyJCxDyNNYu9jky9edtwmQ4aMlzDSomOtVJkuTVo2kCFDRlPGH1Nlb4UA27E3AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -370,7 +398,7 @@ url: "http://imys.net/20150428/jquery-delayHover.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

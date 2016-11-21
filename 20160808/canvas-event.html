@@ -9,31 +9,28 @@
   <link rel="canonical" href="http://imys.net/20160808/canvas-event.html">
   
   
-  <title>如何为Canvas中特定图形绑定事件？ | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>如何为Canvas中特定图形绑定事件？ | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="canvas,html5,event">
+  <meta name="keywords" content="Html5,Canvas,Event">
   <meta name="description" content="Canvas绑定事件，为Canvas中特定图形绑定事件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何为Canvas中特定图形绑定事件？">
 <meta property="og:url" content="http://imys.net/20160808/canvas-event.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="Canvas绑定事件，为Canvas中特定图形绑定事件">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.896Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何为Canvas中特定图形绑定事件？">
 <meta name="twitter:description" content="Canvas绑定事件，为Canvas中特定图形绑定事件">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="Canvas 本身也属于 HTMLElement，自然也是支持各种事件绑定的。但绘制在其中的图形并不作为其子元素存在，这就不能方便的为 Canvas 中的某个特定图形去绑定事件。
-我们都知道 js 中的事件委托，将事件绑定到父节点上，待到父节点响应事件时，动态判断当前响应元素为目标子节点时再执行对应的操作。
-这个思想同样也可以用在 Canvas 上，只需要为 canvas 元素绑定事件，事件响应时判断当前鼠标位置处于哪个图形之上，执行对应的操作。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -46,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -104,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -123,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -133,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">如何为Canvas中特定图形绑定事件？</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2016-08-08T06:43:38.000Z" itemprop="datePublished" class="page-time">
+  Aug 8, 2016
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -202,58 +209,64 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/event/">event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html5/">html5</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Canvas/">Canvas</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Event/">Event</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Html5/">Html5</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20160808/canvas-event.html&title=《如何为Canvas中特定图形绑定事件？》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20160808/canvas-event.html&title=《如何为Canvas中特定图形绑定事件？》 — Yusen's Blog&source=Canvas 本身也属于 HTMLElement，自然也是支持各种事件绑定的。但绘制在其中的图形并不作为其子元素存在，这就不能方便的为 Canvas 中的..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20160808/canvas-event.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何为Canvas中特定图形绑定事件？》 — Yusen's Blog&url=http://imys.net/20160808/canvas-event.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20160808/canvas-event.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -283,10 +296,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="canvas-event" data-title="如何为Canvas中特定图形绑定事件？" data-url="http://imys.net/20160808/canvas-event.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -295,10 +308,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -322,57 +336,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "如何为Canvas中特定图形绑定事件？",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20160808/canvas-event.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20160808/canvas-event.html&title=《如何为Canvas中特定图形绑定事件？》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20160808/canvas-event.html&title=《如何为Canvas中特定图形绑定事件？》 — Yusen's Blog&source=Canvas 本身也属于 HTMLElement，自然也是支持各种事件绑定的。但绘制在其中的图形并不作为其子元素存在，这就不能方便的为 Canvas 中的..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20160808/canvas-event.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《如何为Canvas中特定图形绑定事件？》 — Yusen's Blog&url=http://imys.net/20160808/canvas-event.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20160808/canvas-event.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAAByElEQVR42u3aS44CMQwFQO5/aWY7EkrzbHfCMKqsUEDpahZW/Hk84vVcrOSXr/u/dx47Fi4u7pj7vFyvR+efr9HX+8s/BRcX9yB3FTFWv1ntJK+aBzVcXNxv4ebXneSWgouL++3c5DGrF+glQri4uJ/lJslPUuy4Kym6IVfDxcUdcPNLyb7PW+q7uLi4Le6zuHqNljxgvXk6Li7uEe5drZQ8dUlas2/OwcXFPcitHpFcU/LwV3hJXFzczdxqAeL6Ab3LTX71wcXFPcOtFj7mL1Md4MDFxT3PzY/ORyjmDZg3BRFcXNzN3LwkkY9o5MWRZujExcXdzJ084DpU5c3awg4uLu4R7iRpmZQ5euMduLi4Z7hJobPXJrkrbEX1XVxc3Fu5k4GJJI3pnVlYuLi4B7l5aLum5MMZSZkVFxf3JDdPXapXk3y0ojB+gYuLe5CbBJHJKEavqFrIqHBxcW/iNkNJq0SSX6eW3+Li4h7h9o6epzrV0Q1cXNzz3GrTtFpM6ZU/orIILi7uZm61RTq/xFQbtLi4uH+f2wtJk8IrLi7uf+L2gtrHAhkuLm4r+akOY91bTMHFxT3DraYiE1a1FDKq7+Li4na4P3YQmnkg7xfqAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -393,7 +415,7 @@ url: "http://imys.net/20160808/canvas-event.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

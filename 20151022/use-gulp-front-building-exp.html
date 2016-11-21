@@ -9,29 +9,28 @@
   <link rel="canonical" href="http://imys.net/20151022/use-gulp-front-building-exp.html">
   
   
-  <title>gulp改善工作流记录 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>gulp改善工作流记录 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="gulp,前端构建">
+  <meta name="keywords" content="Gulp,前端构建">
   <meta name="description" content="gulp改善工作流记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gulp改善工作流记录">
 <meta property="og:url" content="http://imys.net/20151022/use-gulp-front-building-exp.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="gulp改善工作流记录">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.908Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="gulp改善工作流记录">
 <meta name="twitter:description" content="gulp改善工作流记录">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="上个月向领导提出的使用gulp+ejs模块化html最近得到了实施，大概记录下此次改造工作。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -44,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -102,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -121,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -131,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">gulp改善工作流记录</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2015-10-22T02:37:53.000Z" itemprop="datePublished" class="page-time">
+  Oct 22, 2015
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -166,7 +175,6 @@
         <div class="post-content" id="post-content" itemprop="postContent">
             <p>上个月向领导提出的<a href="../20150908/gulp-ejs-module.html">使用gulp+ejs模块化html</a>最近得到了实施，大概记录下此次改造工作。</p>
 <a id="more"></a>
-<!-- toc -->
 <h2 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h2><pre><code>html
   -dest
     --Folder
@@ -192,20 +200,8 @@ static
 node_modules
 gulpfile.js
 package.json
-</code></pre><h2 id="gulp模块"><a href="#gulp模块" class="headerlink" title="gulp模块"></a>gulp模块</h2><pre><code>var gulp = require(&apos;gulp&apos;),  
-    less = require(&apos;gulp-less&apos;),  
-    minifycss = require(&apos;gulp-minify-css&apos;),    
-    jshint = require(&apos;gulp-jshint&apos;),   
-    uglify = require(&apos;gulp-uglify&apos;),   
-    imagemin = require(&apos;gulp-imagemin&apos;),   
-    pngquant = require(&apos;imagemin-pngquant&apos;),    
-    rename = require(&apos;gulp-rename&apos;),    
-    notify = require(&apos;gulp-notify&apos;),    
-    browserSync = require(&apos;browser-sync&apos;), 
-    ejs = require(&apos;gulp-ejs&apos;),          
-    changed = require(&apos;gulp-changed&apos;),  
-    replace = require(&apos;gulp-replace&apos;);  
-</code></pre><p><code>html</code>选择了<code>ejs</code>来管理，<code>css</code>预处理选择了<code>less</code>。<br>简单、实用！</p>
+</code></pre><h2 id="gulp模块"><a href="#gulp模块" class="headerlink" title="gulp模块"></a>gulp模块</h2><figure class="highlight js"><table><tr><td class="code"><pre><div class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>),  </div><div class="line">    less = <span class="built_in">require</span>(<span class="string">'gulp-less'</span>),  </div><div class="line">    minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>),    </div><div class="line">    jshint = <span class="built_in">require</span>(<span class="string">'gulp-jshint'</span>),   </div><div class="line">    uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>),   </div><div class="line">    imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>),   </div><div class="line">    pngquant = <span class="built_in">require</span>(<span class="string">'imagemin-pngquant'</span>),    </div><div class="line">    rename = <span class="built_in">require</span>(<span class="string">'gulp-rename'</span>),    </div><div class="line">    notify = <span class="built_in">require</span>(<span class="string">'gulp-notify'</span>),    </div><div class="line">    browserSync = <span class="built_in">require</span>(<span class="string">'browser-sync'</span>), </div><div class="line">    ejs = <span class="built_in">require</span>(<span class="string">'gulp-ejs'</span>),          </div><div class="line">    changed = <span class="built_in">require</span>(<span class="string">'gulp-changed'</span>),  </div><div class="line">    replace = <span class="built_in">require</span>(<span class="string">'gulp-replace'</span>);</div></pre></td></tr></table></figure>
+<p><code>html</code>选择了<code>ejs</code>来管理，<code>css</code>预处理选择了<code>less</code>。<br>简单、实用！</p>
 <p>对于浏览器同步工具，本来使用的是<code>live-reload</code>，在初次使用中感觉不是很顺畅，之后换成了<code>browserSync</code>。<br>browserSync 除了文件更改实时刷新浏览器外，还有多设备同步功能，通过可视化控制台可以实时测试移动端代码。<br>对比而言，live-reload 依赖 Chrome 及 LiveReload 插件，应该是借助 Chrome 的某种开放接口实现的。<br>而 browserSync 是基于虚拟服务器的，所有可以实现多设备的控制。</p>
 <h2 id="工作流"><a href="#工作流" class="headerlink" title="工作流"></a>工作流</h2><p>编写html、less、js =&gt; 浏览器访问（URL对应html文件目录） =&gt; 浏览器显示编译后的html、css、js =&gt; html已经过模板合并，<code>include</code>等关键字是没有的 =&gt; css是less编译生成的，页面从始至终引用的都是 css 文件，不过会有一个对应的同名 less 文件。</p>
 <p>改造进行阶段也没遇到什么太大问题，能遇到的问题也都能在github中找到答案。<br>不过还是要根据各自团队的项目情况因地制宜，合理配置。</p>
@@ -224,58 +220,64 @@ package.json
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端构建/">前端构建</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gulp/">Gulp</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端构建/">前端构建</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20151022/use-gulp-front-building-exp.html&title=《gulp改善工作流记录》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20151022/use-gulp-front-building-exp.html&title=《gulp改善工作流记录》 — Yusen's Blog&source=上个月向领导提出的使用gulp+ejs模块化html最近得到了实施，大概记录下此次改造工作。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20151022/use-gulp-front-building-exp.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《gulp改善工作流记录》 — Yusen's Blog&url=http://imys.net/20151022/use-gulp-front-building-exp.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20151022/use-gulp-front-building-exp.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -305,10 +307,10 @@ package.json
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="use-gulp-front-building-exp" data-title="gulp改善工作流记录" data-url="http://imys.net/20151022/use-gulp-front-building-exp.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -317,10 +319,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -344,57 +347,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "gulp改善工作流记录",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20151022/use-gulp-front-building-exp.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20151022/use-gulp-front-building-exp.html&title=《gulp改善工作流记录》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20151022/use-gulp-front-building-exp.html&title=《gulp改善工作流记录》 — Yusen's Blog&source=上个月向领导提出的使用gulp+ejs模块化html最近得到了实施，大概记录下此次改造工作。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20151022/use-gulp-front-building-exp.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《gulp改善工作流记录》 — Yusen's Blog&url=http://imys.net/20151022/use-gulp-front-building-exp.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20151022/use-gulp-front-building-exp.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3aS27DMAwFwN7/0uk2QFH5kXRaWBqtgnwkjxcvpsSvr3i83kbyzvv7758mr3/+9raBgYHxWMZrOdYL5BeRfLqec32bMDAwTmDkU/cA65hOPr24ZgwMDIzgETCP7F74YmBgYFQZSeGah/W/BS4GBsajGElcrqdez1kthj9Yi2NgYDyQke+6//3rj5xvYGBgPIrxKo67qL8Fbm9gYGDszeg96uVlav4ImBTVF/NjYGBsylgvk5SjObsau/ntwMDAOJORtHblpWbStJGTCoGLgYGxBWO9WF5AVhvIqvtmhUdVDAyMAxjrKXptXr1GinxjDgMD4wRGL16T5rBq01i+1uggEwMD41GMu9odqgVt+d9gvS4GBsYxjOqSk7jsHRIUjjAxMDCOYfTKyzyIJw0c5W4RDAyMjRjVRodew8S9twMDA2NvRnW3Kvlmr7FscsswMDDOYSRHAr2Q7Z1XlJstMDAwNmVMDil7cdkL94v3MTAwtmbkkZd/p3pBk2MDDAyM0xjVInO+/L2RjYGBcQKjF7WTjblq+F48DWJgYBzDmGz39/DJ5UbbcBgYGJsyXsWRt0oUgjIungvPthgYGBsx8jGZdB7Ko3YxDAyMLRh5yOaBWz08qAYuBgbGmYzehtqkZJ0UsRgYGBj5ceOkWM1Xj2bDwMDAaG1v5Q0ZveazG/43MDAwHsXoHQb0LmJ+qImBgXEaoxqdeZjm23D5M97obwADA+N5jG9rWCLgo9VIwQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -415,7 +426,7 @@ url: "http://imys.net/20151022/use-gulp-front-building-exp.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

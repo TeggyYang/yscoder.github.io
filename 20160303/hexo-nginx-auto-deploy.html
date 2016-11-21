@@ -9,7 +9,7 @@
   <link rel="canonical" href="http://imys.net/20160303/hexo-nginx-auto-deploy.html">
   
   
-  <title>阿里云搭建Git服务，实现Hexo自动部署 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>阿里云搭建Git服务，实现Hexo自动部署 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
@@ -22,22 +22,15 @@
 <meta property="og:url" content="http://imys.net/20160303/hexo-nginx-auto-deploy.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="Hexo自动部署，阿里云Ubuntu安装配置Nginx">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.899Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="阿里云搭建Git服务，实现Hexo自动部署">
 <meta name="twitter:description" content="Hexo自动部署，阿里云Ubuntu安装配置Nginx">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="使用 gitcafe pages 更新博客只需要敲几条命令，如果因为博客搬到了阿里云，却没有原来操作方便，那便得不偿失了。所以就准备在服务器上建个 Git 远程仓库，用 Git Hooks 实现自动部署。
-Git HooksGit Hooks 就是一些触发特定事件的脚本。比如 commit、push、merge 等等，也区分本地 Hooks 和服务端 Hooks。我这次使用的是post-receive。
-
-当用户在本地仓库执行git-push命令时，服务器上远程仓库就会对应执行git-receive-pack命令，而git-receive-pack命令会调用pre-receive钩子。
-
-这需要在服务器上建立一个 Git 远程仓库，和一个用于获取更新（git pull）的本地仓库。
-远程仓库：最原始的版本库，所有的本地仓库就可以克隆这个仓库。就像你在 Github 创建一个项目，这就是一个远程仓库。本地仓库：这个就是平常的工作目录，容易理解。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -50,7 +43,9 @@ Git HooksGit Hooks 就是一些触发特定事件的脚本。比如 commit、pus
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -108,6 +103,7 @@ Git HooksGit Hooks 就是一些触发特定事件的脚本。比如 commit、pus
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -127,7 +123,7 @@ Git HooksGit Hooks 就是一些触发特定事件的脚本。比如 commit、pus
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -137,8 +133,15 @@ Git HooksGit Hooks 就是一些触发特定事件的脚本。比如 commit、pus
 
     <div class="container">
         <h1 class="title">阿里云搭建Git服务，实现Hexo自动部署</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2016-03-03T08:33:19.000Z" itemprop="datePublished" class="page-time">
+  Mar 3, 2016
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -287,9 +290,10 @@ git push origin master
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
@@ -298,47 +302,52 @@ git push origin master
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20160303/hexo-nginx-auto-deploy.html&title=《阿里云搭建Git服务，实现Hexo自动部署》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20160303/hexo-nginx-auto-deploy.html&title=《阿里云搭建Git服务，实现Hexo自动部署》 — Yusen's Blog&source=使用 gitcafe pages 更新博客只需要敲几条命令，如果因为博客搬到了阿里云，却没有原来操作方便，那便得不偿失了。所以就准备在服务器上建个 Git..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20160303/hexo-nginx-auto-deploy.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《阿里云搭建Git服务，实现Hexo自动部署》 — Yusen's Blog&url=http://imys.net/20160303/hexo-nginx-auto-deploy.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20160303/hexo-nginx-auto-deploy.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -368,10 +377,10 @@ git push origin master
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="hexo-nginx-auto-deploy" data-title="阿里云搭建Git服务，实现Hexo自动部署" data-url="http://imys.net/20160303/hexo-nginx-auto-deploy.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -380,10 +389,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -407,57 +417,65 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "阿里云搭建Git服务，实现Hexo自动部署",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20160303/hexo-nginx-auto-deploy.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20160303/hexo-nginx-auto-deploy.html&title=《阿里云搭建Git服务，实现Hexo自动部署》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20160303/hexo-nginx-auto-deploy.html&title=《阿里云搭建Git服务，实现Hexo自动部署》 — Yusen's Blog&source=使用 gitcafe pages 更新博客只需要敲几条命令，如果因为博客搬到了阿里云，却没有原来操作方便，那便得不偿失了。所以就准备在服务器上建个 Git..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20160303/hexo-nginx-auto-deploy.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《阿里云搭建Git服务，实现Hexo自动部署》 — Yusen's Blog&url=http://imys.net/20160303/hexo-nginx-auto-deploy.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20160303/hexo-nginx-auto-deploy.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACN0lEQVR42u3azW6DQAxFYd7/panUVaWU4VwbqmLOrKKIwHwsnPHPtuG1f6/Pzz+/Obpm/1j8mouXDBkyHsvYl2vNIL9d46+6vwwZMt7A4EE2feT6zjxwn9xBhgwZMpZhdB2mrwrEMmTIkJEG3Fpgrb0IGTJkyOBJLCm6kRIbD8G35OIyZMh4IKPTGLj78x/1N2TIkPGPGXtp8XS3Fr7j/ciQIWM0Y11K4yGYB0o+YMETWhkyZLyBwQthfMyLD3txGHr1MmTIGMcgl/aDZtqeTIO4DBkyZjPI0TAdueg3L0nS+8s9ZciQMZrBMa0HhPX84iiGDBkyxjE6QxVp8K2NWaDDqAwZMkYzeHrJC2dpQb8/IiZDhozZjDsK9yR88yMmKsPJkCFjNKPf/+yU3mpbR2NhMmTIGMRIk0YSXmuHRb6Tw/8NGTJkDGX0241poY2McaSFORkyZLyHUQu+nXSUYIIZMBkyZAxldIYk+MHu2kbpSRIrQ4aMcYz0B6gXipPbWjtThgwZb2bUWoy1a/pDGFut1ypDhoyHM0jorG03TYD5rk5ycRkyZAxi8C3yg2PtRaQjF/FFMmTIeCBjDxdPRHkg5ofCwzvLkCFjNCMNc7ypmY5upElvMWTLkCHjsQwSZDsNg/5wmAwZMmT025DpgbIW9U9ehAwZMmSER8M0DeajFSfNABkyZLyekQJ4yzNNbmXIkPFORi0RTQe8+HPj46MMGTJGM2qNgVrLMy23FY+JMmTImMP4AgwfDyyPXNYqAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -478,7 +496,7 @@ url: "http://imys.net/20160303/hexo-nginx-auto-deploy.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 

@@ -9,33 +9,28 @@
   <link rel="canonical" href="http://imys.net/20150415/online-run-code.html">
   
   
-  <title>不链接页面在新窗口或标签页运行代码 | Yusen&#39;s Blog | 折腾不在乎成功与否。</title>
+  <title>不链接页面在新窗口或标签页运行代码 | Yusen&#39;s Blog | 我还是那个我！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="theme-color" content="#3F51B5">
   
   
-  <meta name="keywords" content="javascript">
+  <meta name="keywords" content="JavaScript">
   <meta name="description" content="不链接页面在新窗口或标签页运行代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不链接页面在新窗口或标签页运行代码">
 <meta property="og:url" content="http://imys.net/20150415/online-run-code.html">
 <meta property="og:site_name" content="Yusen's Blog">
 <meta property="og:description" content="不链接页面在新窗口或标签页运行代码">
-<meta property="og:updated_time" content="2016-10-08T03:12:45.905Z">
+<meta property="og:updated_time" content="2016-11-14T01:20:44.501Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不链接页面在新窗口或标签页运行代码">
 <meta name="twitter:description" content="不链接页面在新窗口或标签页运行代码">
   
     <link rel="alternative" href="/atom.xml" title="Yusen&#39;s Blog" type="application/atom+xml">
   
-  <meta name="summary" content="
-在一些IT博客或者论坛都有在新窗口或标签页直接运行当前页面内代码的功能，但却不是像一些资源网站里的直接预览资源页面。这样动态的运行代码，无疑是节省了很大服务器空间。
-
-前端网（W3Cfuns）就有这样的功能，用户可以直接运行博主笔记内的代码，问答论坛也一样。
-查看了一下代码实现，原来是window.open()方法。">
   <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="/css/style.css?v=1.1.9">
+  <link rel="stylesheet" href="/css/style.css?v=1.2.1">
 </head>
 
 <body>
@@ -48,7 +43,9 @@
     </a>
     <div class="brand-wrap">
       <div class="brand">
-        <a href="/" class="avatar waves-effect waves-circle waves-light"><img src="/img/face.jpg"></a>
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/face.jpg">
+        </a>
         <hgroup class="introduce">
           <h5 class="nickname">王昱森</h5>
           <a href="mailto:634206017@qq.com" title="634206017@qq.com" class="mail">634206017@qq.com</a>
@@ -106,6 +103,7 @@
     </div>
   </div>
 </aside>
+
   <main id="main">
     <header class="top-header" id="header">
     <div class="flex-row">
@@ -125,7 +123,7 @@
         </div>
         
         
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
             <i class="icon icon-lg icon-share-alt"></i>
         </a>
         
@@ -135,8 +133,15 @@
 
     <div class="container">
         <h1 class="title">不链接页面在新窗口或标签页运行代码</h1>
-        
-        
+        <h5 class="subtitle">
+            
+                <time datetime="2015-04-15T01:58:21.000Z" itemprop="datePublished" class="page-time">
+  Apr 15, 2015
+</time>
+
+
+            
+        </h5>
     </div>
 
     
@@ -183,6 +188,7 @@
 <p>参数1<code>URL</code>省略会打开一个空白页，也就是<code>about:blank</code>页。不过<code>window.open()</code>方法居然是有返回值的，可以返回新页面的<code>window</code>对象。</p>
 <p>如此的话，我们就能访问新页面的<code>DOM</code>，自然就可以写入代码了。</p>
 <h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>新窗口或标签页运行代码<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">textarea</span> <span class="attr">style</span>=<span class="string">"width:600px;height:150px;"</span> <span class="attr">id</span>=<span class="string">"code"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">        <span class="built_in">document</span>.write(<span class="string">"&lt;h1&gt;我是运行在新窗口或标签页的代码。&lt;/h1&gt;"</span>);</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">textarea</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"runCode()"</span>&gt;</span>运行代码<span class="tag">&lt;/<span class="name">button</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="javascript"></span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">runCode</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">var</span> example = <span class="built_in">window</span>.open(<span class="string">''</span>,<span class="string">''</span>,<span class="string">''</span>);</div><div class="line">        <span class="keyword">var</span> code = <span class="built_in">document</span>.getElementById(<span class="string">'code'</span>).value;</div><div class="line">        example.document.write(code)</div><div class="line">        example.focus();</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+
         </div>
         
         <blockquote class="post-copyright">
@@ -197,58 +203,65 @@
     </footer>
 </blockquote>
         
-<div class="post-reward">
-    <a id="rewardBtn" href="javascript:;" class="post-reward-btn waves-effect waves-circle waves-light">赏</a>
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
 </div>
+
 
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
 
 
             
-<div class="post-share-wrap">
-    <div class="post-share" id="post-share">
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20150415/online-run-code.html&title=《不链接页面在新窗口或标签页运行代码》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20150415/online-run-code.html&title=《不链接页面在新窗口或标签页运行代码》 — Yusen's Blog&source=
+在一些IT博客或者论坛都有在新窗口或标签页直接运行当前页面内代码的功能，但却不是像一些资源网站里的直接预览资源页面。这样动态的运行代码，无疑是节省了很大..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20150415/online-run-code.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不链接页面在新窗口或标签页运行代码》 — Yusen's Blog&url=http://imys.net/20150415/online-run-code.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20150415/online-run-code.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
-    <a href="javascript:;" id="share-fab" class="post-share-fab waves-effect waves-circle">
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
         <i class="icon icon-share-alt icon-lg"></i>
     </a>
 </div>
+
 
 
         </div>
@@ -278,10 +291,10 @@
 
             
     
-<div class="duoshuo">
+<div class="duoshuo" id="comments">
 	<div class="ds-thread" data-thread-key="online-run-code" data-title="不链接页面在新窗口或标签页运行代码" data-url="http://imys.net/20150415/online-run-code.html"></div>
 </div>
-<script src="/js/embed.min.js?v=1.1.9"></script>
+<script src="/js/embed.min.js?v=1.2.1"></script>
 <script src="//cdn.bootcss.com/marked/0.3.6/marked.min.js" async="async"></script>
 <script>
 var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
@@ -290,10 +303,11 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 
 
 
+
 </article>
 
-<div id="reward" class="reward-lay">
-    <a class="reward-off" id="rewardOff" href="javascript:;"><i class="icon icon-close"></i></a>
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <h3 class="reward-title">
         <i class="icon icon-quote-left"></i>
         请我吃辣条~
@@ -317,57 +331,66 @@ var duoshuoQuery = {short_name:'ysblog', theme: 'none'}
 </div>
 
 
+
 </div>
+
   </main>
   <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true }</script>
 
-<script>var BLOG = { ROOT: '/' };
-BLOG.SHARE = {
-title: "不链接页面在新窗口或标签页运行代码",
-pic: "/img/face.jpg",
-summary: document.getElementsByName('summary')[0].content,
-url: "http://imys.net/20150415/online-run-code.html" }
-</script>
-<div class="global-share" id="global-share">
+
+
+<div class="global-share" id="globalShare">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://imys.net/20150415/online-run-code.html&title=《不链接页面在新窗口或标签页运行代码》 — Yusen's Blog&pic=http://imys.net/img/face.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
       <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
           <i class="icon icon-weixin"></i>
         </a>
       </li>
       <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://imys.net/20150415/online-run-code.html&title=《不链接页面在新窗口或标签页运行代码》 — Yusen's Blog&source=
+在一些IT博客或者论坛都有在新窗口或标签页直接运行当前页面内代码的功能，但却不是像一些资源网站里的直接预览资源页面。这样动态的运行代码，无疑是节省了很大..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://imys.net/20150415/online-run-code.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《不链接页面在新窗口或标签页运行代码》 — Yusen's Blog&url=http://imys.net/20150415/online-run-code.html&via=http://imys.net" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://imys.net/20150415/online-run-code.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
         </a>
       </li>
     </ul>
  </div>
 
 
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQW7EMAgF0N7/0tNtq2oyH0irDn5eRZEV+2WBjOHjIx6PLyOZ83Xm9ZvrmTcPDAyMt2U8Lke+8LNNJBv9OSffGwYGxjmMZxFsMif/Qdeh+XpdDAwMjOpzHriv8RgYGBhzxouDWpDc/ouAi4GB8VaM6gEuSUqTr/WSZAwMjNMY+a373z//Sn0DAwPjrRiP4pgkrvfu5NsqGBgYqxm9ZfIEOElu8/cvvo+BgXEYYxJS5y0Xyczor2BgYKxm9Bopki/kiWu12ImBgbGV0ftQXpLswao/CAMDYzej2uJwV3NGtRQRBXoMDIzVjDzg5o0R1Tc3JLEYGBgHMCblxl6jRrWZo7BbDAyMpYxeO0UvKU0OjkkSi4GBcQKjWpjsHQ3z4mh+VH2ahWNgYCxl5Ie/aqI7KV4WDqwYGBgHMJolw8H12eTy7mmzBQYGxlJGr/0rH9V4GGXbGBgYhzGqCWQecO+9kis3hGFgYCxiVANur7dhkhIXCgYYGBjHMKoXZL3jYEIqp8QYGBhHMnq37tW2ieoeolwcAwNjKSPfYi+57c0pzMfAwFjK6F303xVeJ60eUXcbBgbGCkY+egvPe7fyNg4MDIzdjLxhIi9wTjDVQgIGBsY5jF73QnJ9NmqhyHeFgYGBUSxP9oqjo4s8DAwMjCAgVksLvbT2RRKLgYGxmpE3cvUWm3w5+mUYGBirGdXUsdeKkRc7qyEbAwNjNeMTVMGJh6aAijYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
   <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
-<script src="/js/main.min.js?v=1.1.9"></script>
+<script src="/js/main.min.js?v=1.2.1"></script>
 
 
 
@@ -388,7 +411,7 @@ url: "http://imys.net/20150415/online-run-code.html" }
 </li>
 </template>
 
-<script src="/js/search.min.js?v=1.1.9"></script>
+<script src="/js/search.min.js?v=1.2.1"></script>
 
 
 
