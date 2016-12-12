@@ -75,48 +75,6 @@
 
     
   <url>
-    <loc>http://imys.net/20150513/wordpress-to-hexo.html</loc>
-    <lastmod>2016-11-14T01:20:44.516Z</lastmod>
-    <data>
-        <display>
-        <title>博客搬迁记 - 从WordPress到Hexo</title>
-        <pubTime>2015-05-13T01:50:02.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>WordPress</tag>
-         
-        <tag>Gitcafe</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20160726/vscode-extension-qiniu-upload.html</loc>
-    <lastmod>2016-11-14T01:20:44.516Z</lastmod>
-    <data>
-        <display>
-        <title>VsCode插件：七牛图床工具，写文章更快一步</title>
-        <pubTime>2016-07-26T01:53:52.000Z</pubTime>
-        
-        <tag>VsCode</tag>
-         
-        <tag>Qiniu</tag>
-         
-        <tag>Markdown</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://imys.net/20150916/webapp-input-use-camera.html</loc>
     <lastmod>2016-11-14T01:20:44.516Z</lastmod>
     <data>
@@ -163,6 +121,27 @@
 
     
   <url>
+    <loc>http://imys.net/20160726/vscode-extension-qiniu-upload.html</loc>
+    <lastmod>2016-11-14T01:20:44.516Z</lastmod>
+    <data>
+        <display>
+        <title>VsCode插件：七牛图床工具，写文章更快一步</title>
+        <pubTime>2016-07-26T01:53:52.000Z</pubTime>
+        
+        <tag>VsCode</tag>
+         
+        <tag>Qiniu</tag>
+         
+        <tag>Markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imys.net/20160503/vue-data-interaction.html</loc>
     <lastmod>2016-11-14T01:20:44.516Z</lastmod>
     <data>
@@ -182,14 +161,37 @@
 
     
   <url>
-    <loc>http://imys.net/20150715/jqplugin-jtip.html</loc>
+    <loc>http://imys.net/20150513/wordpress-to-hexo.html</loc>
+    <lastmod>2016-11-14T01:20:44.516Z</lastmod>
+    <data>
+        <display>
+        <title>博客搬迁记 - 从WordPress到Hexo</title>
+        <pubTime>2015-05-13T01:50:02.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>WordPress</tag>
+         
+        <tag>Gitcafe</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20150507/jqplugin-uploadpreview.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>造个轮子-基于jquery的文字提示插件jtip</title>
-        <pubTime>2015-07-15T07:21:58.000Z</pubTime>
+        <title>图片上传本地预览jquery插件</title>
+        <pubTime>2015-05-07T10:11:00.000Z</pubTime>
         
         <tag>jQuery插件</tag>
+         
+        <tag>jQuery</tag>
          
          
            
@@ -206,9 +208,26 @@
         <title>jQuery扩展 - 延迟执行hover事件</title>
         <pubTime>2015-04-28T09:15:57.000Z</pubTime>
         
+        <tag>jQuery插件</tag>
+         
         <tag>jQuery</tag>
          
-        <tag>jQuery插件</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20150407/jquery-anchor-scroll.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>jQuery实现通用的单页面锚点平滑滚动</title>
+        <pubTime>2015-04-07T05:45:03.000Z</pubTime>
+        
+        <tag>jQuery</tag>
          
          
            
@@ -237,13 +256,15 @@
 
     
   <url>
-    <loc>http://imys.net/20150414/js-copytext.html</loc>
+    <loc>http://imys.net/20150527/js-cancel-event.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>js文本复制全兼容实例</title>
-        <pubTime>2015-04-14T06:00:45.000Z</pubTime>
+        <title>js阻止子元素响应父元素事件</title>
+        <pubTime>2015-05-27T12:44:34.000Z</pubTime>
         
+        <tag>Event</tag>
+         
         <tag>JavaScript</tag>
          
          
@@ -254,14 +275,14 @@
 
     
   <url>
-    <loc>http://imys.net/20150407/jquery-anchor-scroll.html</loc>
+    <loc>http://imys.net/20150414/js-copytext.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>jQuery实现通用的单页面锚点平滑滚动</title>
-        <pubTime>2015-04-07T05:45:03.000Z</pubTime>
+        <title>js文本复制全兼容实例</title>
+        <pubTime>2015-04-14T06:00:45.000Z</pubTime>
         
-        <tag>jQuery</tag>
+        <tag>JavaScript</tag>
          
          
            
@@ -330,33 +351,6 @@
 
     
   <url>
-    <loc>http://imys.net/20151107/mobile-page-size-and-layout.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>移动端页面开发关键—尺寸和布局</title>
-        <pubTime>2015-11-07T15:02:29.000Z</pubTime>
-        
-        <tag>移动端</tag>
-         
-        <tag>devicePixelRatio</tag>
-         
-        <tag>em</tag>
-         
-        <tag>rem</tag>
-         
-        <tag>vw</tag>
-         
-        <tag>flex</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://imys.net/20160127/mobile-1px.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
@@ -366,15 +360,36 @@
         
         <tag>CSS</tag>
          
-        <tag>devicePixelRatio</tag>
-         
-        <tag>em</tag>
-         
         <tag>Mobile</tag>
+         
+        <tag>devicePixelRatio</tag>
          
         <tag>Webview</tag>
          
         <tag>Viewport</tag>
+         
+        <tag>em</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20160413/one-element-can-do-much.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>一个HTML元素可以做什么？</title>
+        <pubTime>2016-04-13T08:37:53.000Z</pubTime>
+        
+        <tag>Html</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>CSS3</tag>
          
          
            
@@ -405,37 +420,16 @@
 
     
   <url>
-    <loc>http://imys.net/20150527/js-cancel-event.html</loc>
+    <loc>http://imys.net/20150919/nodejs-shell.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>js阻止子元素响应父元素事件</title>
-        <pubTime>2015-05-27T12:44:34.000Z</pubTime>
+        <title>Node.js命令行玩法</title>
+        <pubTime>2015-09-19T12:20:13.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Nodejs</tag>
          
-        <tag>Event</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20160413/one-element-can-do-much.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>一个HTML元素可以做什么？</title>
-        <pubTime>2016-04-13T08:37:53.000Z</pubTime>
-        
-        <tag>CSS</tag>
-         
-        <tag>CSS3</tag>
-         
-        <tag>Html</tag>
+        <tag>cmd</tag>
          
          
            
@@ -459,46 +453,6 @@
         <tag>deviceorientation</tag>
          
         <tag>orientation</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20151113/simulation-of-native-radio-checkbox.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>优雅的模拟表单元素radio、checkbox</title>
-        <pubTime>2015-11-13T00:51:49.000Z</pubTime>
-        
-        <tag>CSS</tag>
-         
-        <tag>iconfont</tag>
-         
-        <tag>radio</tag>
-         
-        <tag>checkbox</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20150415/online-run-code.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>不链接页面在新窗口或标签页运行代码</title>
-        <pubTime>2015-04-15T01:58:21.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
          
          
            
@@ -550,6 +504,29 @@
 
     
   <url>
+    <loc>http://imys.net/20151113/simulation-of-native-radio-checkbox.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>优雅的模拟表单元素radio、checkbox</title>
+        <pubTime>2015-11-13T00:51:49.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>iconfont</tag>
+         
+        <tag>radio</tag>
+         
+        <tag>checkbox</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imys.net/20161031/text-transform-capitalize-not-working.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
@@ -564,46 +541,6 @@
         <tag>text-transform</tag>
          
         <tag>capitalize</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20160316/use-history-pushState.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>使用HTML5 history API增强移动端用户体验</title>
-        <pubTime>2016-03-16T06:42:51.000Z</pubTime>
-        
-        <tag>Html5</tag>
-         
-        <tag>History</tag>
-         
-        <tag>用户体验</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20151022/use-gulp-front-building-exp.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>gulp改善工作流记录</title>
-        <pubTime>2015-10-22T02:37:53.000Z</pubTime>
-        
-        <tag>Gulp</tag>
-         
-        <tag>前端构建</tag>
          
          
            
@@ -634,6 +571,27 @@
 
     
   <url>
+    <loc>http://imys.net/20150906/text-truncation.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>前端文字的截断处理</title>
+        <pubTime>2015-09-06T09:37:32.000Z</pubTime>
+        
+        <tag>Html</tag>
+         
+        <tag>CSS</tag>
+         
+        <tag>Ellipsis</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://imys.net/20150716/ue-shortcut-key.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
@@ -641,9 +599,9 @@
         <title>用户体验--WEB站点快捷键实现方案</title>
         <pubTime>2015-07-16T07:06:58.000Z</pubTime>
         
-        <tag>用户体验</tag>
-         
         <tag>WEB</tag>
+         
+        <tag>用户体验</tag>
          
         <tag>快捷键</tag>
          
@@ -655,18 +613,33 @@
 
     
   <url>
-    <loc>http://imys.net/20150906/text-truncation.html</loc>
+    <loc>http://imys.net/20150415/online-run-code.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>前端文字的截断处理</title>
-        <pubTime>2015-09-06T09:37:32.000Z</pubTime>
+        <title>不链接页面在新窗口或标签页运行代码</title>
+        <pubTime>2015-04-15T01:58:21.000Z</pubTime>
         
-        <tag>CSS</tag>
+        <tag>JavaScript</tag>
          
-        <tag>Html</tag>
          
-        <tag>Ellipsis</tag>
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20151022/use-gulp-front-building-exp.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>gulp改善工作流记录</title>
+        <pubTime>2015-10-22T02:37:53.000Z</pubTime>
+        
+        <tag>Gulp</tag>
+         
+        <tag>前端构建</tag>
          
          
            
@@ -699,54 +672,18 @@
 
     
   <url>
-    <loc>http://imys.net/20150429/javascript-arguments.html</loc>
+    <loc>http://imys.net/20160316/use-history-pushState.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>javascript之arguments对象</title>
-        <pubTime>2015-04-29T03:55:20.000Z</pubTime>
+        <title>使用HTML5 history API增强移动端用户体验</title>
+        <pubTime>2016-03-16T06:42:51.000Z</pubTime>
         
-        <tag>JavaScript</tag>
+        <tag>Html5</tag>
          
-        <tag>arguments</tag>
+        <tag>用户体验</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20160530/javascript-advanced-functions.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>javascript高阶函数介绍</title>
-        <pubTime>2016-05-30T15:02:08.000Z</pubTime>
-        
-        <tag>JavaScript</tag>
-         
-        <tag>Function</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20150507/jqplugin-uploadpreview.html</loc>
-    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
-    <data>
-        <display>
-        <title>图片上传本地预览jquery插件</title>
-        <pubTime>2015-05-07T10:11:00.000Z</pubTime>
-        
-        <tag>jQuery</tag>
-         
-        <tag>jQuery插件</tag>
+        <tag>History</tag>
          
          
            
@@ -775,16 +712,16 @@
 
     
   <url>
-    <loc>http://imys.net/20150919/nodejs-shell.html</loc>
+    <loc>http://imys.net/20160530/javascript-advanced-functions.html</loc>
     <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>Node.js命令行玩法</title>
-        <pubTime>2015-09-19T12:20:13.000Z</pubTime>
+        <title>javascript高阶函数介绍</title>
+        <pubTime>2016-05-30T15:02:08.000Z</pubTime>
         
-        <tag>Nodejs</tag>
+        <tag>JavaScript</tag>
          
-        <tag>cmd</tag>
+        <tag>Function</tag>
          
          
            
@@ -794,16 +731,60 @@
 
     
   <url>
-    <loc>http://imys.net/20160406/css-tips.html</loc>
-    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
+    <loc>http://imys.net/20150429/javascript-arguments.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
     <data>
         <display>
-        <title>CSS实用Tips</title>
-        <pubTime>2016-04-06T09:42:48.000Z</pubTime>
+        <title>javascript之arguments对象</title>
+        <pubTime>2015-04-29T03:55:20.000Z</pubTime>
         
-        <tag>CSS</tag>
+        <tag>JavaScript</tag>
          
-        <tag>CSS3</tag>
+        <tag>arguments</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20150715/jqplugin-jtip.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>造个轮子-基于jquery的文字提示插件jtip</title>
+        <pubTime>2015-07-15T07:21:58.000Z</pubTime>
+        
+        <tag>jQuery插件</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20151107/mobile-page-size-and-layout.html</loc>
+    <lastmod>2016-11-14T01:20:44.501Z</lastmod>
+    <data>
+        <display>
+        <title>移动端页面开发关键—尺寸和布局</title>
+        <pubTime>2015-11-07T15:02:29.000Z</pubTime>
+        
+        <tag>devicePixelRatio</tag>
+         
+        <tag>em</tag>
+         
+        <tag>移动端</tag>
+         
+        <tag>rem</tag>
+         
+        <tag>vw</tag>
+         
+        <tag>flex</tag>
          
          
            
@@ -832,20 +813,14 @@
 
     
   <url>
-    <loc>http://imys.net/20160303/hexo-nginx-auto-deploy.html</loc>
+    <loc>http://imys.net/20160511/hexo-search.html</loc>
     <lastmod>2016-11-14T01:20:44.485Z</lastmod>
     <data>
         <display>
-        <title>阿里云搭建Git服务，实现Hexo自动部署</title>
-        <pubTime>2016-03-03T08:33:19.000Z</pubTime>
+        <title>Hexo添加站内搜索功能初步完成</title>
+        <pubTime>2016-05-11T08:08:50.000Z</pubTime>
         
         <tag>Hexo</tag>
-         
-        <tag>Nginx</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>部署</tag>
          
          
            
@@ -865,46 +840,6 @@
         <tag>CSS</tag>
          
         <tag>iconfont</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20150709/ie-nodisplay-iconfont.html</loc>
-    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
-    <data>
-        <display>
-        <title>ie不显示iconfont字体图标</title>
-        <pubTime>2015-07-09T02:12:33.000Z</pubTime>
-        
-        <tag>Html</tag>
-         
-        <tag>iconfont</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20150629/css3-target-selector.html</loc>
-    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
-    <data>
-        <display>
-        <title>css3选择器(:target)用法</title>
-        <pubTime>2015-06-29T00:57:17.000Z</pubTime>
-        
-        <tag>CSS3</tag>
-         
-        <tag>selector</tag>
-         
-        <tag>target</tag>
          
          
            
@@ -937,18 +872,54 @@
 
     
   <url>
-    <loc>http://imys.net/20160808/canvas-event.html</loc>
+    <loc>http://imys.net/20150709/ie-nodisplay-iconfont.html</loc>
     <lastmod>2016-11-14T01:20:44.485Z</lastmod>
     <data>
         <display>
-        <title>如何为Canvas中特定图形绑定事件？</title>
-        <pubTime>2016-08-08T06:43:38.000Z</pubTime>
+        <title>ie不显示iconfont字体图标</title>
+        <pubTime>2015-07-09T02:12:33.000Z</pubTime>
         
-        <tag>Html5</tag>
+        <tag>Html</tag>
          
-        <tag>Canvas</tag>
+        <tag>iconfont</tag>
          
-        <tag>Event</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20150409/css-borde-shape.html</loc>
+    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
+    <data>
+        <display>
+        <title>CSS巧用border画小图形</title>
+        <pubTime>2015-04-09T13:26:50.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>border</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20160406/css-tips.html</loc>
+    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
+    <data>
+        <display>
+        <title>CSS实用Tips</title>
+        <pubTime>2016-04-06T09:42:48.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+        <tag>CSS3</tag>
          
          
            
@@ -966,27 +937,6 @@
         <pubTime>2015-04-20T05:29:44.000Z</pubTime>
         
         <tag>CSS3</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://imys.net/20160215/download-music-by-nodejs.html</loc>
-    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
-    <data>
-        <display>
-        <title>写一个歌曲下载工具</title>
-        <pubTime>2016-02-15T08:33:31.000Z</pubTime>
-        
-        <tag>Nodejs</tag>
-         
-        <tag>Express</tag>
-         
-        <tag>Cheerio</tag>
          
          
            
@@ -1036,16 +986,18 @@
 
     
   <url>
-    <loc>http://imys.net/20160207/end-2015.html</loc>
+    <loc>http://imys.net/20150629/css3-target-selector.html</loc>
     <lastmod>2016-11-14T01:20:44.485Z</lastmod>
     <data>
         <display>
-        <title>我为什么选择了前端？</title>
-        <pubTime>2016-02-07T05:43:14.000Z</pubTime>
+        <title>css3选择器(:target)用法</title>
+        <pubTime>2015-06-29T00:57:17.000Z</pubTime>
         
-        <tag>前端</tag>
+        <tag>CSS3</tag>
          
-        <tag>面试</tag>
+        <tag>selector</tag>
+         
+        <tag>target</tag>
          
          
            
@@ -1055,16 +1007,18 @@
 
     
   <url>
-    <loc>http://imys.net/20150409/css-borde-shape.html</loc>
+    <loc>http://imys.net/20160215/download-music-by-nodejs.html</loc>
     <lastmod>2016-11-14T01:20:44.485Z</lastmod>
     <data>
         <display>
-        <title>CSS巧用border画小图形</title>
-        <pubTime>2015-04-09T13:26:50.000Z</pubTime>
+        <title>写一个歌曲下载工具</title>
+        <pubTime>2016-02-15T08:33:31.000Z</pubTime>
         
-        <tag>CSS</tag>
+        <tag>Nodejs</tag>
          
-        <tag>border</tag>
+        <tag>Express</tag>
+         
+        <tag>Cheerio</tag>
          
          
            
@@ -1116,18 +1070,37 @@
 
     
   <url>
-    <loc>http://imys.net/20150908/gulp-ejs-module.html</loc>
+    <loc>http://imys.net/20160207/end-2015.html</loc>
     <lastmod>2016-11-14T01:20:44.485Z</lastmod>
     <data>
         <display>
-        <title>使用gulp+ejs模块化html</title>
-        <pubTime>2015-09-08T10:04:47.000Z</pubTime>
+        <title>我为什么选择了前端？</title>
+        <pubTime>2016-02-07T05:43:14.000Z</pubTime>
         
-        <tag>Gulp</tag>
+        <tag>前端</tag>
          
-        <tag>Ejs</tag>
+        <tag>面试</tag>
          
-        <tag>模块化</tag>
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20160808/canvas-event.html</loc>
+    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
+    <data>
+        <display>
+        <title>如何为Canvas中特定图形绑定事件？</title>
+        <pubTime>2016-08-08T06:43:38.000Z</pubTime>
+        
+        <tag>Html5</tag>
+         
+        <tag>Canvas</tag>
+         
+        <tag>Event</tag>
          
          
            
@@ -1156,23 +1129,6 @@
 
     
   <url>
-    <loc>http://imys.net/20160511/hexo-search.html</loc>
-    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
-    <data>
-        <display>
-        <title>Hexo添加站内搜索功能初步完成</title>
-        <pubTime>2016-05-11T08:08:50.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://imys.net/20160118/hexo-blog-update-log.html</loc>
     <lastmod>2016-11-14T01:20:44.485Z</lastmod>
     <data>
@@ -1183,6 +1139,50 @@
         <tag>Hexo</tag>
          
         <tag>Material Design</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20160303/hexo-nginx-auto-deploy.html</loc>
+    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
+    <data>
+        <display>
+        <title>阿里云搭建Git服务，实现Hexo自动部署</title>
+        <pubTime>2016-03-03T08:33:19.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>Nginx</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>部署</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://imys.net/20150908/gulp-ejs-module.html</loc>
+    <lastmod>2016-11-14T01:20:44.485Z</lastmod>
+    <data>
+        <display>
+        <title>使用gulp+ejs模块化html</title>
+        <pubTime>2015-09-08T10:04:47.000Z</pubTime>
+        
+        <tag>Gulp</tag>
+         
+        <tag>Ejs</tag>
+         
+        <tag>模块化</tag>
          
          
            
