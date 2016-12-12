@@ -191,9 +191,9 @@
     </summary>
     
     
-      <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
-    
       <category term="Canvas" scheme="http://imys.net/tags/Canvas/"/>
+    
+      <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
     
       <category term="Event" scheme="http://imys.net/tags/Event/"/>
     
@@ -405,9 +405,9 @@
     
       <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
     
-      <category term="用户体验" scheme="http://imys.net/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
-    
       <category term="History" scheme="http://imys.net/tags/History/"/>
+    
+      <category term="用户体验" scheme="http://imys.net/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
     
   </entry>
   
@@ -1026,9 +1026,9 @@ package.json
     </summary>
     
     
-      <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
-    
       <category term="Canvas" scheme="http://imys.net/tags/Canvas/"/>
+    
+      <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
     
       <category term="Chart" scheme="http://imys.net/tags/Chart/"/>
     
@@ -1050,9 +1050,9 @@ package.json
     </summary>
     
     
-      <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
-    
       <category term="Canvas" scheme="http://imys.net/tags/Canvas/"/>
+    
+      <category term="Html5" scheme="http://imys.net/tags/Html5/"/>
     
       <category term="Process" scheme="http://imys.net/tags/Process/"/>
     
@@ -1074,9 +1074,9 @@ package.json
     </summary>
     
     
-      <category term="WEB" scheme="http://imys.net/tags/WEB/"/>
-    
       <category term="用户体验" scheme="http://imys.net/tags/%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C/"/>
+    
+      <category term="WEB" scheme="http://imys.net/tags/WEB/"/>
     
       <category term="快捷键" scheme="http://imys.net/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     
