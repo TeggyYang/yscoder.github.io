@@ -125,11 +125,11 @@
     </summary>
     
     
-      <category term="JavaScript" scheme="http://imys.net/tags/JavaScript/"/>
-    
       <category term="Editor" scheme="http://imys.net/tags/Editor/"/>
     
       <category term="ExecCommand" scheme="http://imys.net/tags/ExecCommand/"/>
+    
+      <category term="JavaScript" scheme="http://imys.net/tags/JavaScript/"/>
     
   </entry>
   
@@ -401,9 +401,9 @@
     </summary>
     
     
-      <category term="Html" scheme="http://imys.net/tags/Html/"/>
-    
       <category term="JavaScript" scheme="http://imys.net/tags/JavaScript/"/>
+    
+      <category term="Html" scheme="http://imys.net/tags/Html/"/>
     
       <category term="技巧" scheme="http://imys.net/tags/%E6%8A%80%E5%B7%A7/"/>
     
@@ -1357,9 +1357,9 @@ package.json
     </summary>
     
     
-      <category term="Event" scheme="http://imys.net/tags/Event/"/>
-    
       <category term="JavaScript" scheme="http://imys.net/tags/JavaScript/"/>
+    
+      <category term="Event" scheme="http://imys.net/tags/Event/"/>
     
   </entry>
   
